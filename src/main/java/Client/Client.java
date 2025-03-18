@@ -8,7 +8,7 @@ public class Client {
     public static void main(String[] args) {
         try {
             Registry registry = LocateRegistry.getRegistry("localhost", 1099);
-            IGestionStock stockService = (IGestionStock) registry.lookup("StockService");
+            IGestionStock stockService = (IGestionStock) registry.lookup("GestionStock");
 
             Articles article = stockService.consulterArticle(1);
             if (article != null) {
